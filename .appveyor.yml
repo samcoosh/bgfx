@@ -5,14 +5,14 @@ environment:
   matrix:
   - PLATFORM: x64
     CONFIG: Release
-    TOOLS: --with-tools    
+    TOOLS:# --with-tools    
   - PLATFORM: x64
     CONFIG: Debug
     TOOLS:
-  - PLATFORM: Win32
+  - PLATFORM: x32
     CONFIG: Release  
     TOOLS:
-  - PLATFORM: Win32
+  - PLATFORM: x32
     CONFIG: Debug
     TOOLS:
   
