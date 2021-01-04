@@ -16,7 +16,7 @@
     </dependencies>
   </metadata>
   <files>
-	<file src="Package-Win32-Release.targets"     target="build\native\bgfx.targets" />  
+	<file src="Package-Win32-Release.targets" target="build\native\bgfx-Win32-Release.targets" />  
 	<file src="bgfx\include\**\*.h" target="build\native\include" />
 	<file src="bx\include\**\*.h" target="build\native\include" />
 	<file src="bimg\include\**\*.h" target="build\native\include" />
