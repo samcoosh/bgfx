@@ -12,6 +12,7 @@ before_build:
   
 build_script:
 - cmd: msbuild .build\projects\vs2019\bgfx.sln /t:Clean,Build /p:Platform=x64 /p:Configuration=Release
+- cmd: msbuild .build\projects\vs2019\bgfx.sln /t:Clean,Build /p:Platform=x64 /p:Configuration=Debug
 - cmd: cd ..
   
 after_test:
