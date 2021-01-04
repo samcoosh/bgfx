@@ -1,6 +1,15 @@
 image:
   - Visual Studio 2019
   
+configuration:
+  - Release
+  - Debug
+  
+environment:
+  matrix:
+  - PLATFORM: x64
+  - PLATFORM: Win32
+  
 install:  
   - git clone --depth 1 https://github.com/bkaradzic/bx
   - git clone --depth 1 https://github.com/bkaradzic/bimg
@@ -8,19 +17,18 @@ install:
 
 before_build:
 - cmd: cd bgfx
-- cmd: ..\bx\tools\bin\windows\genie --with-tools --platform=x64 vs2019
+- cmd: ..\bx\tools\bin\windows\genie --with-tools --platform=%PLATFORM% vs2019
   
 build_script:
-- cmd: msbuild .build\projects\vs2019\bgfx.sln /t:Clean,Build /p:Platform=x64 /p:Configuration=Release
-- cmd: msbuild .build\projects\vs2019\bgfx.sln /t:Clean,Build /p:Platform=x64 /p:Configuration=Debug
+- cmd: msbuild .build\projects\vs2019\bgfx.sln /t:Clean,Build /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION%
 - cmd: cd ..
   
-after_test:
-  - cmd: nuget pack -Version %APPVEYOR_BUILD_VERSION%
+#after_test:
+#  - cmd: nuget pack Package-%PLATFORM%-%CONFIGURATION%.nuspec -Version %APPVEYOR_BUILD_VERSION%-%PLATFORM%-%CONFIGURATION%
   
-artifacts:
-  - path: '**\*.nupkg'
+#artifacts:
+#  - path: '**\*.nupkg'
   
-deploy:
-- provider: Environment
-  name: production
+#deploy:
+#- provider: Environment
+#  name: production
