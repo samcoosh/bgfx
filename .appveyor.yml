@@ -1,14 +1,20 @@
 image:
   - Visual Studio 2019
-  
-configuration:
-  - Release
-  - Debug
-  
+    
 environment:
   matrix:
   - PLATFORM: x64
+    CONFIG: Release
+    TOOLS: --with-tools    
+  - PLATFORM: x64
+    CONFIG: Debug
+    TOOLS:
   - PLATFORM: Win32
+    CONFIG: Release  
+    TOOLS:
+  - PLATFORM: Win32
+    CONFIG: Debug
+    TOOLS:
   
 install:  
   - git clone --depth 1 https://github.com/bkaradzic/bx
@@ -17,7 +23,7 @@ install:
 
 before_build:
 - cmd: cd bgfx
-- cmd: ..\bx\tools\bin\windows\genie --with-tools --platform=%PLATFORM% vs2019
+- cmd: ..\bx\tools\bin\windows\genie %TOOLS% --platform=%PLATFORM% vs2019
   
 build_script:
 - cmd: msbuild .build\projects\vs2019\bgfx.sln /t:Clean,Build /p:Platform=%PLATFORM% /p:Configuration=%CONFIGURATION%
