@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>bgfx-Win32-Release</id>
+    <version>1.0.0</version>
+    <authors>samcoosh</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">Zlib</license>
+    <projectUrl>https://github.com/samcoosh/bgfx.git</projectUrl>    
+    <description>bgfx</description>
+    <releaseNotes></releaseNotes>
+    <copyright>$copyright$</copyright>
+    <tags>native,bgfx,C,C++</tags>
+	<repository type="git" url="https://github.com/samcoosh/bgfx.git" />
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+	<file src="Package-Win32-Release.targets"     target="build\native\bgfx.targets" />  
+	<file src="bgfx\include\**\*.h" target="build\native\include" />
+	<file src="bx\include\**\*.h" target="build\native\include" />
+	<file src="bimg\include\**\*.h" target="build\native\include" />
+	
+	<file src="bgfx\.build\win32_vs2019\bin\bgfxRelease.lib" target="build\native\lib\bgfxRelease.lib" />
+	<file src="bgfx\.build\win32_vs2019\bin\bimg_decodeRelease.lib" target="build\native\lib\bimg_decodeRelease.lib" />
+	<file src="bgfx\.build\win32_vs2019\bin\bimg_encodeRelease.lib" target="build\native\lib\bimg_encodeRelease.lib" />
+	<file src="bgfx\.build\win32_vs2019\bin\bimgRelease.lib" target="build\native\lib\bimgRelease.lib" />
+	<file src="bgfx\.build\win32_vs2019\bin\bxRelease.lib" target="build\native\lib\bxRelease.lib" />	
+  </files>
+</package>

@@ -27,18 +27,18 @@ install:
 
 before_build:
 - cmd: cd bgfx
-- cmd: ..\bx\tools\bin\windows\genie %TOOLS% --platform=%BUILD_PLATFORM% vs2019
+- cmd: ..\bx\tools\bin\windows\genie %TOOLS% --with-dynamic-runtime --platform=%BUILD_PLATFORM% vs2019
   
 build_script:
 - cmd: msbuild .build\projects\vs2019\bgfx.sln /t:Clean,Build /p:Configuration=%CONFIG% /p:Platform=%platform%
 - cmd: cd ..
   
-#after_test:
-#  - cmd: nuget pack Package-%PLATFORM%-%CONFIGURATION%.nuspec -Version %APPVEYOR_BUILD_VERSION%-%PLATFORM%-%CONFIGURATION%
+after_test:
+  - cmd: nuget pack Package-%PLATFORM%-%CONFIGURATION%.nuspec -Version %APPVEYOR_BUILD_VERSION%-%PLATFORM%-%CONFIGURATION%
   
-#artifacts:
-#  - path: '**\*.nupkg'
+artifacts:
+  - path: '**\*.nupkg'
   
-#deploy:
-#- provider: Environment
-#  name: production
+deploy:
+- provider: Environment
+  name: production
