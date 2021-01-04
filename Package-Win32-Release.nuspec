@@ -22,8 +22,7 @@
 	<file src="bimg\include\**\*.h" target="build\native\include" />
 	
 	<file src="bgfx\.build\win32_vs2019\bin\bgfxRelease.lib" target="build\native\lib\bgfxRelease.lib" />
-	<file src="bgfx\.build\win32_vs2019\bin\bimg_decodeRelease.lib" target="build\native\lib\bimg_decodeRelease.lib" />
-	<file src="bgfx\.build\win32_vs2019\bin\bimg_encodeRelease.lib" target="build\native\lib\bimg_encodeRelease.lib" />
+	<file src="bgfx\.build\win32_vs2019\bin\bimg_decodeRelease.lib" target="build\native\lib\bimg_decodeRelease.lib" />	
 	<file src="bgfx\.build\win32_vs2019\bin\bimgRelease.lib" target="build\native\lib\bimgRelease.lib" />
 	<file src="bgfx\.build\win32_vs2019\bin\bxRelease.lib" target="build\native\lib\bxRelease.lib" />	
   </files>
