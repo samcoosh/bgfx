@@ -34,7 +34,7 @@ build_script:
 - cmd: cd ..
   
 after_test:
-  - cmd: nuget pack Package-%PLATFORM%-%CONFIGURATION%.nuspec -Version %APPVEYOR_BUILD_VERSION%-%PLATFORM%-%CONFIGURATION%
+  - cmd: nuget pack Package-%PLATFORM%-%CONFIG%.nuspec -Version %APPVEYOR_BUILD_VERSION%-%PLATFORM%-%CONFIG%
   
 artifacts:
   - path: '**\*.nupkg'
