@@ -5,7 +5,7 @@ environment:
   matrix:
   - PLATFORM: x64
     CONFIG: Release
-    TOOLS:# --with-tools    
+    TOOLS:
   - PLATFORM: x64
     CONFIG: Debug
     TOOLS:
