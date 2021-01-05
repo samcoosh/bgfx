@@ -22,8 +22,15 @@
 	<file src="bimg\include\**\*.h" target="build\native\include" />
 	
 	<file src="bgfx\.build\win64_vs2019\bin\bgfxRelease.lib" target="build\native\lib\bgfxRelease.lib" />
-	<file src="bgfx\.build\win64_vs2019\bin\bimg_decodeRelease.lib" target="build\native\lib\bimg_decodeRelease.lib" />	
+	<file src="bgfx\.build\win64_vs2019\bin\bgfxRelease.pdb" target="build\native\lib\bgfxRelease.pdb" />
+	
+	<file src="bgfx\.build\win64_vs2019\bin\bimg_decodeRelease.lib" target="build\native\lib\bimg_decodeRelease.lib" />
+	<file src="bgfx\.build\win64_vs2019\bin\bimg_decodeRelease.pdb" target="build\native\lib\bimg_decodeRelease.pdb" />
+	
 	<file src="bgfx\.build\win64_vs2019\bin\bimgRelease.lib" target="build\native\lib\bimgRelease.lib" />
-	<file src="bgfx\.build\win64_vs2019\bin\bxRelease.lib" target="build\native\lib\bxRelease.lib" />		
+	<file src="bgfx\.build\win64_vs2019\bin\bimgRelease.pdb" target="build\native\lib\bimgRelease.pdb" />
+	
+	<file src="bgfx\.build\win64_vs2019\bin\bxRelease.lib" target="build\native\lib\bxRelease.lib" />
+	<file src="bgfx\.build\win64_vs2019\bin\bxRelease.pdb" target="build\native\lib\bxRelease.pdb" />
   </files>
 </package>
